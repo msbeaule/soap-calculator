@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate the lye to oil ratio">
+    <meta name="author" content="Michelle">
+    <title>Soap Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css.css">
+
+    <!--[if IE]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+
+<body>
+
+    <!-- NAVIGATION MENU START !-->
+    <nav>
+    </nav>
+    <!-- NAVIGATION MENU END !-->
+
+    <h2>Soap Calculator</h2>
+
+    <div class="container">
+
+        <hr />
+        <div class="row">
+            <div class="col-md-8">
+
+                <form id="soapForm" method="post">
+
+                    <!--START CLASS FORM-GROUP-->
+                    <div class="form-group">
+
+                        <!--START ROW-->
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <label class="control-label">Choose Oil</label>
+                                <div class="oil-div">
+                                    <select class="form-control oil" required>
+                                        <option value="">Choose Oil</option>
+                                        <option value="olive">olive</option>
+                                        <option value="coconut">coconut</option>
+                                        <option value="sunflower">sunflower</option>
+                                        <option value="apricot">apricot</option>
+                                        <option value="castor">castor</option>
+                                        <option value="hemp">hemp</option>
+                                        <option value="babassu">babassu</option>
+                                    </select>
+                                    <select class="form-control oil" required>
+                                        <option value="">Choose Oil</option>
+                                        <option value="olive">olive</option>
+                                        <option value="coconut">coconut</option>
+                                        <option value="sunflower">sunflower</option>
+                                        <option value="apricot">apricot</option>
+                                        <option value="castor">castor</option>
+                                        <option value="hemp">hemp</option>
+                                        <option value="babassu">babassu</option>
+                                    </select>
+                                    <select class="form-control oil" required>
+                                        <option value="">Choose Oil</option>
+                                        <option value="olive">olive</option>
+                                        <option value="coconut">coconut</option>
+                                        <option value="sunflower">sunflower</option>
+                                        <option value="apricot">apricot</option>
+                                        <option value="castor">castor</option>
+                                        <option value="hemp">hemp</option>
+                                        <option value="babassu">babassu</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="col-xs-3">
+                                <label class="control-label">Grams</label>
+                                <div class="gram-div">
+                                    <input type="text" class="form-control grams" value="" required />
+                                    <input type="text" class="form-control grams" value="" required />
+                                    <input type="text" class="form-control grams" value="" required />
+                                </div>
+                            </div>
+
+
+                            <!--CALCULATE BUTTON-->
+                            <div class="col-xs-2">
+                                <button type="submit" class="btn btn-default button-calc">Calculate</button>
+                            </div>
+                            <!--CALCULATE BUTTON END-->
+
+                            <!--ADD MORE BUTTON-->
+                            <div class="col-xs-2">
+                                <button type="button" class="btn btn-default button-add">Add More</button>
+                            </div>
+                            <!--ADD MORE BUTTON END-->
+
+                            <!--SUBTRACT BUTTON-->
+                            <div class="col-xs-2">
+                                <button type="button" class="btn btn-default button-sub">Subtract</button>
+                            </div>
+                            <!--SUBTRACT BUTTON END-->
+
+                        </div>
+                        <!--END ROW-->
+
+                    </div>
+                    <!--END CLASS FORM-GROUP-->
+
+                    <!--START CLASS FORM-GROUP-->
+                    <div class="form-group">
+
+                        <!--START ROW-->
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <label class="control-label">Total Grams of Lye</label>
+                                <input type="text" class="form-control" value="0" name="total-lye" id="total-lye" readonly />
+                            </div>
+                            <div class="col-xs-3">
+                                <label class="control-label">Superfat %</label>
+                                <input type="text" class="form-control" value="" name="superfat" id="superfat" pattern="^\d+$" required />
+                            </div>
+                        </div>
+                        <!--END ROW-->
+
+                    </div>
+                    <!--END CLASS FORM-GROUP-->
+
+                    <!--START CLASS FORM-GROUP-->
+                    <div class="form-group">
+
+                        <!--START ROW-->
+                        <div class="row">
+                            <!--added a div and changed some stuff so it's left aligned-->
+                            <div class="col-xs-6">
+                                <div id="soapForm-errors">
+                                </div>
+                            </div>
+                        </div>
+                        <!--END ROW-->
+
+                    </div>
+                    <!--END CLASS FORM-GROUP-->
+
+                </form>
+
+            </div>
+
+            <!-- JavaScript +++++   JQUERY and BOOTSTRAP START -->
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as
+            needed  <script src="js/bootstrap.min.js"></script>
+            -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+            <script src="index.js"></script>
+            <!-- JavaScript +++++  JQUERY and BOOTSTRAP END -->
+        </div>
+    </div>
+</body>
+
+</html>
