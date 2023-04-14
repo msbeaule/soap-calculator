@@ -1,31 +1,38 @@
 //awaiting new values for 2 new things that replaced 2 things.
 
+const oil_options =
+'<select class="form-control oil" required>' +
+    '<option value="">Choose Oil</option>' +
+    '<option value="olive">olive</option>' +
+    '<option value="coconut">coconut</option>' +
+    //'<option value="sunflower">sunflower</option>' +
+    //'<option value="apricot">apricot</option>' +
+    '<option value="castor">castor</option>' +
+    '<option value="hemp">hemp</option>' +
+    '<option value="babassu">babassu</option>' +
+'</select>';
 
-//-----------------------------------------------------------------------------
+const gram_form_input = '<input type="text" class="form-control grams" value="" required/>'
+
+// initialize form options
+$( document ).ready(function() {
+    $('.oil-div').append(oil_options);
+    $('.oil-div').append(oil_options);
+    $('.gram-div').append(gram_form_input);
+    $('.gram-div').append(gram_form_input);
+});
+
+
 //ADD FORMS FUNCTIONS
 
 function addOilForm() {
-    var oil_str = "";
-    oil_str += '<select class="form-control oil" required>' +
-        '<option value="">Choose Oil</option>' +
-        '<option value="olive">olive</option>' +
-        '<option value="coconut">coconut</option>' +
-        '<option value="sunflower">sunflower</option>' +
-        '<option value="apricot">apricot</option>' +
-        '<option value="castor">castor</option>' +
-        '<option value="hemp">hemp</option>' +
-        '<option value="babassu">babassu</option>' +
-        '</select>';
-    $('.oil-div').append(oil_str);
+    $('.oil-div').append(oil_options);
 }
 
 function addGramsForm() {
-    var gram_str = "";
-    gram_str += '<input type="text" class="form-control grams" value="" required/>';
-    $('.gram-div').append(gram_str);
+    $('.gram-div').append(gram_form_input);
 }
 
-//-----------------------------------------------------------------------------
 //SUBTRACT FORMS FUNCTIONS
 
 function subOilForm() {
@@ -36,7 +43,6 @@ function subGramsForm() {
     $('.grams:last').remove();
 }
 
-//-----------------------------------------------------------------------------
 //EVENT TO ADD FORM ENTRIES
 
 var MAX_FORM_ENTRY = 8;
@@ -50,7 +56,6 @@ $('.button-add').on('click', function () {
     }
 });
 
-//-----------------------------------------------------------------------------
 //EVENT TO SUBTRACT FORM ENTRIES
 
 $('.button-sub').on('click', function () {
@@ -62,7 +67,6 @@ $('.button-sub').on('click', function () {
     }
 });
 
-//-----------------------------------------------------------------------------
 //EVENT TO CALCULATE
 
 $('#soapForm').submit(function (evt) {
@@ -117,7 +121,7 @@ $('#soapForm').submit(function (evt) {
     $('#total-lye').val(total_lye);
 });
 
-//-----------------------------------------------------------------------------
+
 //SWITCH STATEMENT FOR OILS
 
 function whichOil(oilName) {
@@ -125,36 +129,16 @@ function whichOil(oilName) {
 
     case "olive":
         return 0.134;
-
     case "coconut":
         return 0.190;
-
-// TODO: add sunflower and apricot values
-
-    /*case "nuu":
-        return 0;
-
-    case "nuu":
-        return 0;
-        */
-
     case "castor":
         return 0.128;
-
     case "hemp":
         return 0.136;
-
     case "babassu":
         return 0.175;
+
+    // TODO: add sunflower and apricot values
+
     }
 }
-
-//SAP_OLIVE = 0.134
-//SAP_COCONUT = 0.190
-//SAP_sunflower = 0
-//SAP_apricot = 0
-//SAP_CASTOR = 0.128
-//SAP_HEMP = 0.136
-//SAP_BABASSU = 0.175
-
-//-----------------------------------------------------------------------------

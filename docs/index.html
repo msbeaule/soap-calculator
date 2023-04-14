@@ -20,14 +20,12 @@
 
 <body>
 
-    <!-- NAVIGATION MENU START !-->
     <nav>
     </nav>
-    <!-- NAVIGATION MENU END !-->
-
-    <h2>Soap Calculator</h2>
 
     <div class="container">
+
+        <h2>Soap Calculator</h2>
 
         <hr />
         <div class="row">
@@ -43,36 +41,6 @@
                             <div class="col-xs-3">
                                 <label class="control-label">Choose Oil</label>
                                 <div class="oil-div">
-                                    <select class="form-control oil" required>
-                                        <option value="">Choose Oil</option>
-                                        <option value="olive">olive</option>
-                                        <option value="coconut">coconut</option>
-                                        <option value="sunflower">sunflower</option>
-                                        <option value="apricot">apricot</option>
-                                        <option value="castor">castor</option>
-                                        <option value="hemp">hemp</option>
-                                        <option value="babassu">babassu</option>
-                                    </select>
-                                    <select class="form-control oil" required>
-                                        <option value="">Choose Oil</option>
-                                        <option value="olive">olive</option>
-                                        <option value="coconut">coconut</option>
-                                        <option value="sunflower">sunflower</option>
-                                        <option value="apricot">apricot</option>
-                                        <option value="castor">castor</option>
-                                        <option value="hemp">hemp</option>
-                                        <option value="babassu">babassu</option>
-                                    </select>
-                                    <select class="form-control oil" required>
-                                        <option value="">Choose Oil</option>
-                                        <option value="olive">olive</option>
-                                        <option value="coconut">coconut</option>
-                                        <option value="sunflower">sunflower</option>
-                                        <option value="apricot">apricot</option>
-                                        <option value="castor">castor</option>
-                                        <option value="hemp">hemp</option>
-                                        <option value="babassu">babassu</option>
-                                    </select>
                                 </div>
                             </div>
 
@@ -80,28 +48,18 @@
                             <div class="col-xs-3">
                                 <label class="control-label">Grams</label>
                                 <div class="gram-div">
-                                    <input type="text" class="form-control grams" value="" required />
-                                    <input type="text" class="form-control grams" value="" required />
-                                    <input type="text" class="form-control grams" value="" required />
                                 </div>
                             </div>
 
-
-                            <!--CALCULATE BUTTON-->
-                            <div class="col-xs-2">
-                                <button type="submit" class="btn btn-default button-calc">Calculate</button>
-                            </div>
-                            <!--CALCULATE BUTTON END-->
-
                             <!--ADD MORE BUTTON-->
                             <div class="col-xs-2">
-                                <button type="button" class="btn btn-default button-add">Add More</button>
+                                <button type="button" class="btn btn-default button-add">Add Rows</button>
                             </div>
                             <!--ADD MORE BUTTON END-->
 
                             <!--SUBTRACT BUTTON-->
                             <div class="col-xs-2">
-                                <button type="button" class="btn btn-default button-sub">Subtract</button>
+                                <button type="button" class="btn btn-default button-sub">Subtract Rows</button>
                             </div>
                             <!--SUBTRACT BUTTON END-->
 
@@ -118,11 +76,11 @@
                         <div class="row">
                             <div class="col-xs-3">
                                 <label class="control-label">Total Grams of Lye</label>
-                                <input type="text" class="form-control" value="0" name="total-lye" id="total-lye" readonly />
+                                <input type="text" class="form-control" value="0" name="total-lye" id="total-lye" readonly/>
                             </div>
                             <div class="col-xs-3">
                                 <label class="control-label">Superfat %</label>
-                                <input type="text" class="form-control" value="" name="superfat" id="superfat" pattern="^\d+$" required />
+                                <input type="text" class="form-control" value="" name="superfat" id="superfat" pattern="^\d+$" required/>
                             </div>
                         </div>
                         <!--END ROW-->
@@ -146,19 +104,27 @@
                     </div>
                     <!--END CLASS FORM-GROUP-->
 
+                    <div class="form-group">
+                        <div class="row">
+                            <!--CALCULATE BUTTON-->
+                            <div class="col-xs-2">
+                                <button type="submit" class="btn btn-default button-calc">Calculate</button>
+                            </div>
+                            <!--CALCULATE BUTTON END-->
+                        </div>
+                    </div>
+
                 </form>
 
             </div>
 
-            <!-- JavaScript +++++   JQUERY and BOOTSTRAP START -->
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
             <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
             <!-- Include all compiled plugins (below), or include individual files as
-            needed  <script src="js/bootstrap.min.js"></script>
+                 needed  <script src="js/bootstrap.min.js"></script>
             -->
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
             <script src="index.js"></script>
-            <!-- JavaScript +++++  JQUERY and BOOTSTRAP END -->
         </div>
     </div>
 </body>
